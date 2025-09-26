@@ -17,17 +17,22 @@ app.use(express.json())
 //   res.send('good')
 // })
 
-app.use('/', express.static(path.resolve(__dirname, 'public')))
 console.log(__dirname)
 
 app.post('/', (req, res) => {
-  store = req.body
-  res.status(200).send(store)
+    store = req.body
+    log(req)
+    res.status(200).send(store)
 })
 
 app.get('/data', (req, res) => {
-  res.json(store)
+    res.json(store)
 })
+app.use('/', express.static(path.resolve(__dirname, 'public')))
+
+function log(req) {
+    console.log(req.body)
+}
 
 // Instead of app.listen, just export the handler
 // export default app

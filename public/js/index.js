@@ -1,7 +1,7 @@
 const r1_on = document.querySelector('#r1_on')
-const r2_on = document.querySelector('#r1_off')
-const r3_on = document.querySelector('#r2_on')
-const r4_on = document.querySelector('#r2_off')
+const r1_off = document.querySelector('#r1_off')
+const r2_on = document.querySelector('#r2_on')
+const r2_off = document.querySelector('#r2_off')
 
 let stat = {
     r1: false,
@@ -35,7 +35,7 @@ r2_on.addEventListener('click', () => {
     })
 })  
 
-r1_off.addEventListener('click', () => {
+r2_off.addEventListener('click', () => {
     stat.r2 = false
     fetch('/', {
         method: 'POST',
