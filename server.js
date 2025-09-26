@@ -7,7 +7,7 @@ const app = express()
 const store = []
 
 const __filename = url.pathToFileURL(import.meta.url)
-const _dirname = path.dirname(__filename)
+const __dirname = path.dirname(__filename)
 
 app.use(express.json())
 
