@@ -6,5 +6,7 @@
   "author": "",
   "type": "module",
   "scripts": {},
-  "dependencies": {}
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
