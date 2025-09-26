@@ -1,5 +1,4 @@
 import express from 'express'
-import fs from 'fs/promises'
 import url from 'url'
 import path from 'path'
 
@@ -11,11 +10,11 @@ const __dirname = path.dirname(__filename)
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.send('good')
-})
+// app.get('/', (req, res) => {
+//   res.send('good')
+// })
 
-app.use('/', express.static(path.resolve(__dirname, 'public')))
+// app.use('/', express.static(path.resolve(__dirname, 'public')))
 
 app.post('/', (req, res) => {
   store.push(req.body)
