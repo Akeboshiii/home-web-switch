@@ -3,7 +3,10 @@ import url from 'url'
 import path from 'path'
 
 const app = express()
-const store = []
+let store = {
+    'r1': false,
+    'r2': false
+}
 
 const __filename = url.fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -18,8 +21,8 @@ app.use('/', express.static(path.resolve(__dirname, 'public')))
 console.log(__dirname)
 
 app.post('/', (req, res) => {
-  store.push(req.body)
-  res.json({ message: 'Saved in memory', data: store })
+  store = req.body
+  res.status(200).send(store)
 })
 
 app.get('/data', (req, res) => {
