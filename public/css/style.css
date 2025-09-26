@@ -1,0 +1,20 @@
+.switches_container {
+    margin: auto;
+    margin-top: 20%;
+    width: fit-content;
+    outline: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.entry_con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button_r {
+    margin-inline: 10px;
+}
