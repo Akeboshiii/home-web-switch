@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="switches_container">
-        <div class="entry_con">
+    <div class="con">
+        <div class="status_container">
+            <img id="r1" src="images/light_off.png" alt="bulb">
+            <img id="r2" src="images/outlet_off.png" alt="outlet">
+        </div>
+        <div class="switches_container">
             <p>Bulb</p>
             <button class="button_r" id="r1_on">On</button>
             <button class="button_r" id="r1_off">Off</button>
-        </div>
-        <div class="entry_con">
             <p>Outlet</p>
             <button class="button_r" id="r2_on">On</button>
             <button class="button_r" id="r2_off">Off</button>
         </div>
     </div>
-    <div class="auth_container"></div>
-</body>
+    <div class="auth_container">
+        <div class="auth_form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login">Log In</button>
+            <p id="notes"></p>
+        </div>
+    </div>
+</body>      
     <script type="module" src="./js/index.js"></script>
 </html>
